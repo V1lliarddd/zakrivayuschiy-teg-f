@@ -13,7 +13,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--font-inter) monospace;
+  font-family: var(--font-inter), monospace;
   font-variation-settings: "wght" var(--thin-inter-weight);
   background-image:
     var(--background-gradient-top), var(--background-gradient-mid),
@@ -32,10 +32,11 @@
   justify-content: center;
   flex-direction: column;
   gap: 20px;
-  min-width: var(--header-block-width);
-  background-color: #fff;
-  border: 2px solid #000;
+  width: var(--header-block-width);
+  background-color: var(--background-color);
+  border: var(--card-border);
   padding-block: 130px;
+  margin-bottom: 95px;
 }
 
 .header h1 {
@@ -49,4 +50,110 @@
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   user-select: none;
   text-transform: uppercase;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 55px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--background-color);
+  border: var(--card-border);
+  width: var(--header-block-width);
+}
+
+.card h3 {
+  font-size: 18px;
+  font-family: var(--font-inter), monospace;
+  font-variation-settings: "wght" var(--thick-inter-weight);
+  align-self: flex-start;
+  margin-inline-start: 10px;
+  margin-block: 4px;
+}
+
+.card__container {
+  position: relative;
+  user-select: none;
+  pointer-events: none;
+  margin-block-end: 25px;
+  max-height: 696px;
+}
+
+.card__container::after {
+  content: "</HTML>";
+  position: absolute;
+  top: 30px;
+  right: 25px;
+  width: 98px;
+  height: 14px;
+  color: #000;
+  font-size: 14px;
+  font-family: "PressStart2P";
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+  text-shadow:
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff,
+    -2px 0 0 #fff,
+    2px 0 0 #fff,
+    0 -2px 0 #fff,
+    0 2px 0 #fff;
+}
+
+@supports (-webkit-text-stroke: var(--card-pseudo-text-stroke)) {
+  .card__container::after {
+    text-shadow: none;
+    -webkit-text-stroke: var(--card-pseudo-text-stroke);
+  }
+}
+
+@supports (text-stroke: var(--card-pseudo-text-stroke)) {
+  .card__container::after {
+    text-shadow: none;
+    text-stroke: var(--card-pseudo-text-stroke);
+  }
+}
+
+.card__text {
+  padding-inline: 25px;
+  font-size: 18px;
+  align-self: flex-start;
+  margin-block-end: 25px;
+  line-height: 21px;
+}
+
+.card__text:last-of-type {
+}
+
+.card__buttons {
+  width: 100%;
+  padding-inline: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-block-end: 20px;
+}
+
+.card__buttons button {
+  border: none;
+  background-color: transparent;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.card__buttons button:last-of-type {
+  border: var(--card-border);
+  padding: 10px 35px;
+  font-size: 14px;
+  font-family: "PressStart2P";
 }
