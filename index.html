@@ -14,15 +14,20 @@
     <link rel="stylesheet" href="./styles/animations.css" />
   </head>
   <body class="page">
-    <header class="header">
+    <header class="header" role="banner">
       <h1>&lt;/HTML&gt;</h1>
-      <h2>Закрывающий тег</h2>
+      <p>Закрывающий тег</p>
     </header>
     <main>
-      <section class="card">
-        <h3>Фритрек и нулевой спринт: Подготовка к работе</h3>
+      <section class="card" aria-labelledby="zero-sprint">
+        <h3 id="zero-sprint">Фритрек и нулевой спринт: Подготовка к работе</h3>
         <div class="card__container">
-          <img src="./images/zero-sprint.jpg" alt="Трейлер в лесу" />
+          <img
+            class="img-blur"
+            src="./images/zero-sprint.jpg"
+            alt="Трейлер в лесу"
+            loading="lazy"
+          />
         </div>
         <p class="card__text">
           Это было самое начало пути. На этом этапе важно было проникнуться
@@ -72,10 +77,15 @@
           </button>
         </div>
       </section>
-      <section class="card">
-        <h3>1 спринт: Я — чистый лист</h3>
+      <section class="card" aria-labelledby="first-sprint">
+        <h3 id="first-sprint">1 спринт: Я — чистый лист</h3>
         <div class="card__container">
-          <img src="./images/first-sprint.jpg" alt="Трейлер в лесу" />
+          <img
+            class="img-contrast"
+            src="./images/first-sprint.jpg"
+            alt="Трейлер в лесу"
+            loading="lazy"
+          />
         </div>
         <p class="card__text">
           На первых этапах мы работали со страхами и сомнениями, которые часто
@@ -127,12 +137,14 @@
           </button>
         </div>
       </section>
-      <section class="card">
-        <h3>1 спринт: А если не получится?</h3>
+      <section class="card" aria-labelledby="first-sprint-temptations">
+        <h3 id="first-sprint-temptations">1 спринт: А если не получится?</h3>
         <div class="card__container">
           <img
+            class="img-grayscale"
             src="./images/first-sprint-temptations.jpg"
             alt="Трейлер в лесу"
+            loading="lazy"
           />
         </div>
         <p class="card__text">
@@ -183,10 +195,15 @@
           </button>
         </div>
       </section>
-      <section class="card">
-        <h3>2 спринт: Погоня за идеалом</h3>
+      <section class="card" aria-labelledby="second-sprint">
+        <h3 id="second-sprint">2 спринт: Погоня за идеалом</h3>
         <div class="card__container">
-          <img src="./images/second-sprint.jpg" alt="Трейлер в лесу" />
+          <img
+            class="img-hue-rotate"
+            src="./images/second-sprint.jpg"
+            alt="Трейлер в лесу"
+            loading="lazy"
+          />
         </div>
         <p class="card__text">
           На этом этапе вы уже достаточно разбирались в основах вёрстки, чтобы
@@ -238,10 +255,15 @@
           </button>
         </div>
       </section>
-      <section class="card">
-        <h3>2 спринт: О тех, кто рядом</h3>
+      <section class="card" aria-labelledby="second-sprint-students">
+        <h3 id="second-sprint-students">2 спринт: О тех, кто рядом</h3>
         <div class="card__container">
-          <img src="./images/second-sprint-students.jpg" alt="Трейлер в лесу" />
+          <img
+            class="img-saturate"
+            src="./images/second-sprint-students.jpg"
+            alt="Трейлер в лесу"
+            loading="lazy"
+          />
         </div>
         <p class="card__text">
           Всё это время вы были не одиноки (хотя, возможно, иногда и
@@ -293,10 +315,15 @@
           </button>
         </div>
       </section>
-      <section class="card">
-        <h3>3 спринт: Обходные стратегии</h3>
+      <section class="card" aria-labelledby="third-sprint">
+        <h3 id="third-sprint">3 спринт: Обходные стратегии</h3>
         <div class="card__container">
-          <img src="./images/third-sprint.jpg" alt="Трейлер в лесу" />
+          <img
+            class="img-sepia"
+            src="./images/third-sprint.jpg"
+            alt="Трейлер в лесу"
+            loading="lazy"
+          />
         </div>
         <p class="card__text">
           На этом курсе вы постоянно решали разные задачи. В какой-то момент вам
@@ -346,10 +373,15 @@
           </button>
         </div>
       </section>
-      <section class="card">
-        <h3>3 спринт: Когда опускаются руки</h3>
+      <section class="card" aria-labelledby="third-sprint-problems">
+        <h3 id="third-sprint-problems">3 спринт: Когда опускаются руки</h3>
         <div class="card__container">
-          <img src="./images/third-sprint-problems.jpg" alt="Трейлер в лесу" />
+          <img
+            class="img-brightness"
+            src="./images/third-sprint-problems.jpg"
+            alt="Трейлер в лесу"
+            loading="lazy"
+          />
         </div>
         <p class="card__text">
           Во время учёбы часто возникает чувство, когда не знаешь, за что
@@ -400,10 +432,15 @@
           </button>
         </div>
       </section>
-      <section class="card">
-        <h3>«Сейчас я здесь»</h3>
+      <section class="card" aria-labelledby="card-now">
+        <h3 id="card-now">«Сейчас я здесь»</h3>
         <div class="card__container">
-          <img src="./images/now-im-here.jpg" alt="Трейлер в лесу" />
+          <img
+            class="img-multyphilter"
+            src="./images/now-im-here.jpg"
+            alt="Трейлер в лесу"
+            loading="lazy"
+          />
         </div>
         <p class="card__text">
           Сейчас вы уже очень много знаете о вёрстке. Но это только начало.
@@ -457,7 +494,39 @@
           </button>
         </div>
       </section>
-      <button></button>
+      <button
+        class="button save-button"
+        onclick="window['save-popup'].showModal()"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="21"
+          height="21"
+          stroke="#000"
+        >
+          <use href="./svg/floppy.svg#floppy"></use>
+        </svg>
+        <span class="button__text">Сохранить на память</span>
+      </button>
+      <dialog id="save-popup" class="save-popup">
+        <div class="save-popup__content">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="39"
+            height="39"
+            stroke="#000"
+          >
+            <use href="./svg/floppy.svg#floppy"></use>
+          </svg>
+          <h1>Вставьте дискету, чтобы продолжить</h1>
+        </div>
+        <button
+          onclick="window['save-popup'].close()"
+          class="save-popup__button button"
+        >
+          <span>ОК</span>
+        </button>
+      </dialog>
     </main>
     <script src="./scripts/like.js"></script>
   </body>
