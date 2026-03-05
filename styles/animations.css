@@ -34,7 +34,7 @@
 
 .like-icon:hover .core {
   fill: var(--heart-black);
-  transition-delay: none;
+  transition-delay: 0s;
 }
 
 .like-icon:hover .main-body {
@@ -44,7 +44,7 @@
 
 .like-icon:active .core {
   fill: var(--heart-white);
-  transition-delay: none;
+  transition-delay: 0s;
 }
 
 .like-icon:active .main-body {
