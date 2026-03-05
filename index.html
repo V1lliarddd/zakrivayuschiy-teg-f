@@ -12,14 +12,23 @@
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
+    <meta
+      name="description"
+      content="Сайт о мыслях студента Практикума в 1-4 спринтах"
+    />
+    <meta property="og:title" content="Закрывающий тег" />
+    <meta
+      property="og:description"
+      content="Мысли о спринтах в блоке 'Верстка'"
+    />
   </head>
-  <body class="page">
-    <header class="header" role="banner">
+  <body class="page flex-col">
+    <header class="header flex-col" aria-label="Заголовок">
       <h1>&lt;/HTML&gt;</h1>
       <p>Закрывающий тег</p>
     </header>
-    <main>
-      <section class="card" aria-labelledby="zero-sprint">
+    <main class="flex-col">
+      <section class="card flex-col" aria-labelledby="zero-sprint">
         <h2 id="zero-sprint">Фритрек и нулевой спринт: Подготовка к работе</h2>
         <div class="card__container">
           <img
@@ -76,7 +85,7 @@
           </button>
         </div>
       </section>
-      <section class="card" aria-labelledby="first-sprint">
+      <section class="card flex-col" aria-labelledby="first-sprint">
         <h2 id="first-sprint">1 спринт: Я — чистый лист</h2>
         <div class="card__container">
           <img
@@ -135,7 +144,7 @@
           </button>
         </div>
       </section>
-      <section class="card" aria-labelledby="first-sprint-temptations">
+      <section class="card flex-col" aria-labelledby="first-sprint-temptations">
         <h2 id="first-sprint-temptations">1 спринт: А если не получится?</h2>
         <div class="card__container">
           <img
@@ -192,7 +201,7 @@
           </button>
         </div>
       </section>
-      <section class="card" aria-labelledby="second-sprint">
+      <section class="card flex-col" aria-labelledby="second-sprint">
         <h2 id="second-sprint">2 спринт: Погоня за идеалом</h2>
         <div class="card__container">
           <img
@@ -251,7 +260,7 @@
           </button>
         </div>
       </section>
-      <section class="card" aria-labelledby="second-sprint-students">
+      <section class="card flex-col" aria-labelledby="second-sprint-students">
         <h2 id="second-sprint-students">2 спринт: О тех, кто рядом</h2>
         <div class="card__container">
           <img
@@ -310,7 +319,7 @@
           </button>
         </div>
       </section>
-      <section class="card" aria-labelledby="third-sprint">
+      <section class="card flex-col" aria-labelledby="third-sprint">
         <h2 id="third-sprint">3 спринт: Обходные стратегии</h2>
         <div class="card__container">
           <img
@@ -367,7 +376,7 @@
           </button>
         </div>
       </section>
-      <section class="card" aria-labelledby="third-sprint-problems">
+      <section class="card flex-col" aria-labelledby="third-sprint-problems">
         <h2 id="third-sprint-problems">3 спринт: Когда опускаются руки</h2>
         <div class="card__container">
           <img
@@ -488,7 +497,7 @@
       </section>
       <button
         class="button save-button"
-        onclick="window['save-popup'].showModal()"
+        onclick="document.getElementById('save-popup').showModal()"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -513,7 +522,7 @@
           <h1>Вставьте дискету, чтобы продолжить</h1>
         </div>
         <button
-          onclick="window['save-popup'].close()"
+          onclick="document.getElementById('save-popup').close()"
           class="save-popup__button button"
         >
           <span>ОК</span>

@@ -4,7 +4,8 @@
   font-family: "Inter-Variable";
   src:
     local("Inter-Variable"),
-    url("../fonts/Inter-Variable.woff2") format("woff2-variations");
+    url("../fonts/Inter-Variable.woff2") format("woff2-variations"),
+    url("../fonts/Inter-Variable.woff2") format("woff2 supports variations");
   font-weight: 400 410 715 785;
 }
 

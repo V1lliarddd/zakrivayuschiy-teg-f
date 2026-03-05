@@ -1,10 +1,12 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
+  /* Шрифты */
   --font-inter: "Inter-Variable";
   --font-press-start: "PressStart2P";
   --thick-inter-weight: 715;
   --thin-inter-weight: 410;
-  --page-padding-block: 100px;
+
+  /* Задники */
   --background-gradient-top: repeating-linear-gradient(
     to right,
     #d3d3d3 0px,
@@ -25,12 +27,15 @@
     #1a1a1a 100%
   );
   --background-color: #fff;
+
+  /* Стили контента */
   --card-border: 2px solid #000;
   --header-block-width: clamp(375px, 700px, 70svw);
+  --page-padding-block: 100px;
+  --card-pseudo-text-stroke: 1px #fff;
 
+  /* Анимации */
   --heart-black: #000;
   --heart-red: #ff0000;
   --heart-white: #fff;
-
-  --card-pseudo-text-stroke: 1px #fff;
 }

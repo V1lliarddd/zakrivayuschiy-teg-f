@@ -10,6 +10,11 @@
 
 */
 
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -19,18 +24,14 @@
     var(--background-gradient-top), var(--background-gradient-mid),
     var(--background-gradient-bottom);
   background-size: cover;
-  display: flex;
   align-items: center;
   justify-content: start;
-  flex-direction: column;
   padding-block: var(--page-padding-block);
 }
 
 .header {
-  display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   gap: 20px;
   width: var(--header-block-width);
   background-color: var(--background-color);
@@ -53,18 +54,14 @@
 }
 
 main {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 50px;
 }
 
 .card {
-  display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   background-color: var(--background-color);
   border: var(--card-border);
   width: var(--header-block-width);
