@@ -1,10 +1,10 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
   /* Шрифты */
-  --font-inter: "Inter-Variable";
-  --font-press-start: "PressStart2P";
-  --thick-inter-weight: 715;
-  --thin-inter-weight: 410;
+  --main-font: "Inter-Variable";
+  --accent-font: "PressStart2P";
+  --thick-main-font: 715;
+  --thin-main-font: 410;
 
   /* Задники */
   --background-gradient-top: repeating-linear-gradient(

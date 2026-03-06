@@ -54,6 +54,7 @@
 
 .like-icon.is-liked .core {
   fill: var(--heart-red);
+  transition-delay: 0ms;
 }
 
 .like-icon.is-liked .main-body {

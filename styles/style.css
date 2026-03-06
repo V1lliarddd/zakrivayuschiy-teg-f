@@ -1,3 +1,5 @@
+/* МАРИНА ЛУКЬЯНОВА С 8 МАРТА!! */
+
 /* Здесь вы напишете основную часть стилей страницы.
 
 Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
@@ -10,16 +12,11 @@
 
 */
 
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
-
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--font-inter), monospace;
-  font-variation-settings: "wght" var(--thin-inter-weight);
+  font-family: var(--main-font), monospace;
+  font-variation-settings: "wght" var(--thin-main-font);
   background-image:
     var(--background-gradient-top), var(--background-gradient-mid),
     var(--background-gradient-bottom);
@@ -27,6 +24,8 @@
   align-items: center;
   justify-content: start;
   padding-block: var(--page-padding-block);
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -38,16 +37,18 @@
   border: var(--card-border);
   padding-block: 130px;
   margin-block-end: 95px;
+  display: flex;
+  flex-direction: column;
 }
 
-.header h1 {
-  font-family: var(--font-press-start);
+.header__title {
+  font-family: var(--accent-font);
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   user-select: none;
 }
 
-.header p {
-  font-family: var(--font-press-start);
+.header__desc {
+  font-family: var(--accent-font);
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   user-select: none;
   text-transform: uppercase;
@@ -57,9 +58,13 @@ main {
   align-items: center;
   justify-content: center;
   gap: 50px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: var(--background-color);
@@ -67,10 +72,10 @@ main {
   width: var(--header-block-width);
 }
 
-.card h3 {
+.card__title {
   font-size: 18px;
-  font-family: var(--font-inter), monospace;
-  font-variation-settings: "wght" var(--thick-inter-weight);
+  font-family: var(--main-font), monospace;
+  font-variation-settings: "wght" var(--thick-main-font);
   align-self: flex-start;
   margin-inline-start: 10px;
   margin-block: 4px;
@@ -97,11 +102,9 @@ main {
   position: absolute;
   top: 30px;
   right: 25px;
-  width: 98px;
-  height: 14px;
   color: #000;
   font-size: 14px;
-  font-family: "PressStart2P";
+  font-family: var(--accent-font);
   opacity: 0.5;
   mix-blend-mode: hard-light;
   text-shadow:
@@ -150,32 +153,16 @@ main {
   margin-block-end: 25px;
 }
 
-.card__buttons button {
-  border: none;
-  background-color: transparent;
-  text-transform: capitalize;
-  cursor: pointer;
-}
-
-.card__buttons button:last-of-type {
-  border: var(--card-border);
-  padding: 10px;
-  font-size: 14px;
-  font-family: "PressStart2P";
-}
-
 .button {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 17px;
-  border: var(--card-border);
   gap: 8px;
-}
-
-.button span {
-  font-family: "PressStart2P";
+  background-color: #fff;
+  cursor: pointer;
   font-size: 14px;
+  font-family: var(--accent-font);
 }
 
 .save-popup[open] {
@@ -203,9 +190,9 @@ main {
   justify-content: center;
 }
 
-.save-popup h1 {
+.save-popup__title {
   width: 100%;
-  font-family: "PressStart2P";
+  font-family: var(--accent-font);
   font-size: 14px;
   text-transform: uppercase;
   line-height: 150%;
@@ -213,7 +200,6 @@ main {
 
 .save-popup__button {
   width: 100%;
-  background-color: transparent;
 }
 
 .img-blur {
@@ -241,23 +227,24 @@ main {
   filter: brightness(1.2) contrast(1.5) saturate(2.5) hue-rotate(320deg);
 }
 
-button:has(svg.like-icon) {
-  height: 38px;
-}
-
 .card__icon-button {
   border: transparent;
-  transition: border 0.3s ease;
+  transition-property: border;
+  height: 38px;
 }
 .card__like-button {
+  padding: 10px;
   width: 130px;
-  position: relative;
-  transition: box-shadow 0.3s ease;
+  transition-property: box-shadow;
 }
 .save-button {
-  cursor: pointer;
+  transition-property: box-shadow;
+}
+
+.button-text {
   position: relative;
-  transition: box-shadow 0.3s ease;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
 }
 
 .button__text {
@@ -276,7 +263,7 @@ button:has(svg.like-icon) {
   fill: #000;
 }
 
-.save-button::after {
+.button-text::after {
   content: "";
   position: absolute;
   top: 0;
@@ -287,22 +274,7 @@ button:has(svg.like-icon) {
   transition: width 0.5s ease-in-out;
 }
 
-.card__like-button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 100%;
-  background-color: #000;
-  transition: width 0.5s ease-in-out;
-}
-
-.save-button:hover::after {
-  width: 100%;
-}
-
-.card__like-button:hover::after {
+.button-text:hover::after {
   width: 100%;
 }
 
