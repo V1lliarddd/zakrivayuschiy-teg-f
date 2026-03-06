@@ -9,8 +9,8 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
-.like-icon {
-  transform-origin: center;
+.heart {
+  transform-origin: center center;
 }
 
 .main-body {

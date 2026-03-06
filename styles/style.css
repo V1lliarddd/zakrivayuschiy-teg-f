@@ -16,6 +16,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font), monospace;
+  background-attachment: fixed;
   font-variation-settings: "wght" var(--thin-main-font);
   background-image:
     var(--background-gradient-top), var(--background-gradient-mid),
@@ -42,13 +43,13 @@
 }
 
 .header__title {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), monospace;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   user-select: none;
 }
 
 .header__desc {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), monospace;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   user-select: none;
   text-transform: uppercase;
@@ -57,7 +58,7 @@
 main {
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 52px;
   display: flex;
   flex-direction: column;
 }
@@ -104,7 +105,7 @@ main {
   right: 25px;
   color: #000;
   font-size: 14px;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), monospace;
   opacity: 0.5;
   mix-blend-mode: hard-light;
   text-shadow:
@@ -151,6 +152,7 @@ main {
   align-items: center;
   justify-content: end;
   margin-block-end: 25px;
+  gap: 5px;
 }
 
 .button {
@@ -162,7 +164,7 @@ main {
   background-color: #fff;
   cursor: pointer;
   font-size: 14px;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), monospace;
 }
 
 .save-popup[open] {
@@ -192,7 +194,7 @@ main {
 
 .save-popup__title {
   width: 100%;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), monospace;
   font-size: 14px;
   text-transform: uppercase;
   line-height: 150%;
@@ -231,6 +233,7 @@ main {
   border: transparent;
   transition-property: border;
   height: 38px;
+  padding: 0;
 }
 .card__like-button {
   padding: 10px;
