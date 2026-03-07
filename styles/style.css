@@ -165,6 +165,10 @@ main {
   cursor: pointer;
   font-size: 14px;
   font-family: var(--accent-font), monospace;
+  position: relative;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-property: box-shadow;
 }
 
 .save-popup[open] {
@@ -239,13 +243,6 @@ main {
 .card__like-button {
   padding: 10px;
   width: 130px;
-}
-
-.button {
-  position: relative;
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
-  transition-property: box-shadow;
 }
 
 .button__text {
