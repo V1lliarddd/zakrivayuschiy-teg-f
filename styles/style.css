@@ -234,20 +234,18 @@ main {
   transition-property: border;
   height: 38px;
   padding: 0;
+  background-color: #fff;
 }
 .card__like-button {
   padding: 10px;
   width: 130px;
-  transition-property: box-shadow;
-}
-.save-button {
-  transition-property: box-shadow;
 }
 
-.button-text {
+.button {
   position: relative;
   transition-duration: 0.3s;
   transition-timing-function: ease;
+  transition-property: box-shadow;
 }
 
 .button__text {
@@ -266,7 +264,7 @@ main {
   fill: #000;
 }
 
-.button-text::after {
+.button::after {
   content: "";
   position: absolute;
   top: 0;
@@ -277,22 +275,19 @@ main {
   transition: width 0.5s ease-in-out;
 }
 
-.button-text:hover::after {
+.button:hover::after {
   width: 100%;
+}
+
+button:focus {
+  outline: none;
 }
 
 .card__icon-button:focus-visible {
   border: 2px solid #000;
 }
 
-.card__like-button:focus,
-.save-button:focus,
-.card__icon-button:focus {
-  outline: none;
-}
-
-.save-button:focus,
-.card__like-button:focus {
+.button:focus-visible {
   box-shadow: 2px 2px 0 #000;
 }
 
@@ -310,5 +305,9 @@ main {
   .save-popup[open] {
     padding-inline: 40px;
     max-width: 340px;
+  }
+  .save-button__icon {
+    width: 28px;
+    height: 28px;
   }
 }
